@@ -76,10 +76,10 @@ color: #0052FF;;
     background-color: #ffffff;
 }
 
-#main_sect_two .col-sm-3:hover{
+/* #main_sect_two .col-sm-3:hover{
     background-color: #0052FF;
     color: #ffffff;
-   }
+   } */
 
 h3{
 font-weight: 600;
