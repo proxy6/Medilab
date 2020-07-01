@@ -10,9 +10,11 @@
     
 
     <!--Font-->
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="medilab_files/font-awesome/css/font-awesome.min.css">
     <!--External CSS-->
     <link rel="stylesheet" href="./medilab_files/style.css">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;700&display=swap" rel="stylesheet">
 
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -26,20 +28,15 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
-<!--Script file-->
-<script src="script.js"></script>
 
-   <script type="text/javascript">
-    $(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-     if (scroll >= 50) {
-      $('nav').addClass('nav-sticky');
-    } 
-    else {
-      $('nav').removeClass('nav-sticky');
-   }
-    });
+  <script type="text/javascript">
+    $(window).on('scroll', function() {
+      if($(window).scrollTop()){
+        $('nav').addClass('nav-sticky');
+      } else {
+        $('nav').removeClass('nav-sticky');
+      }
+    })
 
   </script>
 
@@ -49,14 +46,14 @@
   <section id="header" class="first-division aos-init aos-animate" data-aos="fade-down" data-aos-duration="1000">
               
     <nav class="navbar navbar-expand-md fixed-top navbar-dark">
-    <a class="navbar-brand" href="#"><span id="logo">Medic</span><span>lab</span></a>
+    <a class="navbar-brand" href="#"><span id="logo">Medic</span><span id="lab">lab</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+        <li class="nav-item ">
+          <a class="nav-link active" id="active" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About Us</a>
@@ -78,14 +75,23 @@
 </div>
 
 <!--Content inside the header-->
- <div class="banner-content container-fluid">
- <div class="inner-content container">
-    <h4 class="display-4 text-center" style="color: white;">We Provide</h4>
-    <h1 class="display-3 text-center font-weight-bolder ">Full Medical Care!</h1>
-    <p class="lead text-center">Higheset Standard of Customer Service</p>
-    <a class="btn btn-primary btn-lg justify-content-center" href="#" role="button">Know more</a>
-</div>
-</div>
+<div class="banner-content container-fluid">
+    <div class="inner-content container">
+       <div class=" row">
+         <div class="col-12  display-4 text-center">We Provide</div>
+       </div>
+       <div class=" row">
+         <div class="col-12 display-3 text-center font-weight-bolder">Full Medical Care!</div>
+       </div>
+       <div class=" row">
+         <div class="col-12 lead text-center">Higheset Standard of Customer Service</div>
+       </div>
+       <div class=" row">
+         <div class="col-12 mt-3 p-2" >  <a class="btn btn-primary btn-lg justify-content-center" href="#" role="button">Know more</a> </div>
+       </div>
+       
+   </div>
+   </div>
 <!--Content Ends-->
 </section>
 <main>
@@ -128,99 +134,97 @@ convenience of the patients
 </div>
 <div class="container text-center">
 <div class="row first_row justify-content-between px-1 py-4">
-<div class="col-sm-3">
-<img src="./medilab_files/brain.png" alt="" width="80px" height="80px"  >
+<div class="col-sm-3" onmouseover = "setNewImage()" onmouseout = "setOldImage()" id="hovered-image" >
+<img  src="./medilab_files/brain.png" alt="" width="80px" height="80px"  >
+
 <h5 class="fig-two">Psychiatry</h5>
 </div>
-<div class="col-sm-3">
-<img src="./medilab_files/test_tube2.png" alt="" width="80px" height="80px">
+<div class="col-sm-3" onmouseover = "setNewImage1()" onmouseout = "setOldImage1()" id="hovered-image1">
+<img src="./medilab_files/test_tube2.png" alt="" width="80px" height="80px" >
 <h5 class="fig-two">Laboratory</h5>
 </div>
-<div class="col-sm-3">
-<img src="./medilab_files/tooth2.png" alt="" width="80px" height="80px">
+<div class="col-sm-3" onmouseover = "setNewImage2()" onmouseout = "setOldImage2()" id="hovered-image2" >
+<img src="./medilab_files/tooth2.png" alt="" width="80px" height="80px" >
 <h5 class="fig-two">Dentistry</h5>
 </div>
-<div class="col-sm-3">
-<img src="./medilab_files/heart_with_pulse2.png" alt="" width="80px" height="80px">
+<div class="col-sm-3"onmouseover = "setNewImage3()" onmouseout = "setOldImage3()" id="hovered-image3" >
+<img src="./medilab_files/heart_with_pulse2.png" alt="" width="80px" height="80px" >
 <h5 class="fig-two">Cardiology</h5>
 </div>
 </div>
 <div class="row second_row mb-5">
-<div class="col-sm-3">
+<div class="col-sm-3" onmouseover = "setNewImage4()" onmouseout = "setOldImage4()" id="hovered-image4" >
 <img src="./medilab_files/vagina2.png" alt="" width="80px" height="80px">
 <h5 class="fig-two">Gynecology</h5>
 </div>
-<div class="col-sm-3">
-<img src="./medilab_files/caduceus2.png" alt="" width="80px" height="80px">
+<div class="col-sm-3" onmouseover = "setNewImage5()" onmouseout = "setOldImage5()" id="hovered-image5" >
+<img src="./medilab_files/caduceus2.png" alt="" width="80px" height="80px" >
 <h5 class="fig-two">Medicine</h5>
 </div>
-<div class="col-sm-3">
-<img src="./medilab_files/Car_Accident2.png" alt="" width="80px" height="80px">
+<div class="col-sm-3" onmouseover = "setNewImage6()" onmouseout = "setOldImage6()" id="hovered-image6" >
+<img src="./medilab_files/Car_Accident2.png" alt="" width="80px" height="80px" >
 <h5 class="fig-two">Emergency</h5>
 </div>
-<div class="col-sm-3">
-<img src="./medilab_files/Child with Pacifier2.png" alt="" width="80px" height="80px">
+<div class="col-sm-3" onmouseover = "setNewImage7()" onmouseout = "setOldImage7()" id="hovered-image7" >
+<img src="./medilab_files/Child with Pacifier2.png" alt="" width="80px" height="80px" >
 <h5 class="fig-two">Pediatrics</h5>
 </div>
 </div>
 </div>
 </section>
 
-<section id="main_sect_services" data-aos="zoom-in" data-aos-duration="2000" class="aos-init aos-animate">
+<section id="services" data-aos="zoom-in" data-aos-duration="2000" class="aos-init aos-animate">
 <div class="container">
 <h3 class="head_three text-center">Our Services</h3>
 <div class="row row-cols-1 row-cols-md-3 services">
 <div class="col mb-4">
-<div class="card h-100 border border-primary">
+<div onmouseover="changeCard()" onmouseout="removeCard()" class="card h-100 border border-primary service-card">
 <img src="./medilab_files/nurse2.png" class="" alt="..." height="80px" width="80px">
-<div class="card-body text-left">
-<h5 class="card-title">Primary Care Physician</h5>
-<p class="card-text">Lmedic Center provides the following
-health care services</p>
-<ul class="services">
-<li>Complete Family Healt Care</li>
-<li>EKG</li>
-<li>X-Ray</li>
-<li>Ultrasound</li>
-<li>Acute and Chronic Care</li>
-<li>Well Woman’s Exam</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col mb-4">
-<div class="card h-100 border border-primary">
-<img src="./medilab_files/vegan_food2.png" class="" alt="..." height="80px" width="80px">
 <div class="card-body">
-<h5 class="card-title">Hslistic Wellness</h5>
-<p class="card-text">You should feel yor best no matter the
-season</p>
-<ul class="Services">
-<li>Weight loss</li>
-<li>Therapeutic medical massage</li>
-<li>Holistic skin care</li>
-<li>K-laser pain management</li>
-<li>Detoxification</li>
-<li>Hormone replacement therapy</li>
-</ul>
+    <h5 class="card-title" id="card-title">Primary Care Physician</h5>
+    <p class="card-text">Lmedic provides the following health care services</p>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>Complete health care plan</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>EKG</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>X-ray</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>Ultrasound</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>Acute and Chronic Care</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>Well Woman's Exam</li>
+    </ul>
 </div>
 </div>
 </div>
 <div class="col mb-4">
-<div class="card h-100 border border-primary">
+<div onmouseover="changeCard1()" onmouseout="removeCard1()" class="card h-100 border border-primary service-card1">
+<img src="./medilab_files/vegan_food2.png" class="pl-2" alt="..." height="80px" width="80px">
+<div class="card-body">
+    <h5 class="card-title" id="card-title">Hslistic Wellness</h5>
+    <p class="card-text">You should feel your best no matter the season</p>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>Weight loss</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>Theraputic medical massage</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>Holistic skin carey</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>K laser pain management</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>Detoxification</li>
+        <li class="list-group-item border-0"><i class="fa fa-check"></i>Hormone Replacement Therapy</li>
+    </ul>
+</div>
+</div>
+</div>
+<div class="col mb-4">
+<div onmouseover="changeCard2()" onmouseout="removeCard2()" class="card h-100 border border-primary service-card2">
 <img src="./medilab_files/Coronavirus1.png" class="" alt="..." height="80px" width="80px">
 <div class="card-body">
-<h5 class="card-title">Allergy and Immunology</h5>
-<p class="card-text">Lmedic Center provides the following
-health care services</p>
-<ul class="services">
-<li>Allergy and immunology</li>
-<li>Testing for Immunology</li>
-<li>Allergy treatments</li>
-<li>Asthma care</li>
-<li>Dematology</li>
-<li>Pediatric allergy</li>
-</ul>
+    <h5 class="card-title">Allergy and Immunology</h5>
+    <p class="card-text">Lmedic provides the following health care services</p>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item border-0 transparent"><i class="fa fa-check"></i>Allergy and Immunology</li>
+        <li class="list-group-item border-0 transparent"><i class="fa fa-check"></i>Testing and Immunology</li>
+        <li class="list-group-item border-0 transparent"><i class="fa fa-check"></i>Allergy treatment</li>
+        <li class="list-group-item border-0 transparent"><i class="fa fa-check"></i>Asthma care</li>
+        <li class="list-group-item border-0 transparent"><i class="fa fa-check"></i>Dematology</li>
+        <li class="list-group-item border-0 transparent"><i class="fa fa-check"></i>Pediatric allergy</li>
+    </ul>
 </div>
 </div>
 </div>
@@ -236,58 +240,65 @@ health care services</p>
 <div class="row-fac">
 <div class="col-cover">
 <div class="text-left">
-<div class="card ">
-<div class="card-header">
-<h4 class="card-header">
-<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#" style="background-color: white;">How do i make an appoinment?</a>
-</h4>
-</div>
-<div id="collapseOne" class="panel-collapse collapse in">
-<div class="card-block">
-If you would like to make an appointent with any one of our practitioners,
-please contact our reception staff. Alternatively you can book an
-appointment online. Every effort will be made to accomodate your
-preffered time and choice of practitioner.
-</div>
-</div>
-</div>
-<div class="card ">
-<div class="card-header">
-<h4 class="card-header">
-<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion" href="collapseTwo">How do i get a copy of my record?</a>
-</h4>
-</div>
-<div id="collapseTwo" class="panel-collapse collapse">
-<div class="card-block">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex sequi provident qui ratione cum aspernatur, exercitationem numquam soluta est architecto non laborum ipsa quae optio eaque voluptates deleniti quaerat facere.
-</div>
-</div>
-</div>
-<div class="card ">
-<div class="card-header">
-<h4 class="card-header">
-<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion" href="collapseThree">Is there a charge for extra copies?</a>
-</h4>
-</div>
-<div id="collapseThree" class="panel-collapse collapse">
-<div class="card-block">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat earum nobis mollitia, deserunt eaque, et libero consequuntur voluptatem veritatis eos voluptate accusantium nemo dolorum? Corrupti voluptatem architecto cum consequatur sequi.
-</div>
-</div>
-</div>
-
-<div class="card ">
-<div class="card-header">
-<h4 class="card-header">
-<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion" href="collapseFour">How do i know the right practitioners?</a>
-</h4>
-</div>
-<div id="collapseFour" class="panel-collapse collapse">
-<div class="card-block">
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt exercitationem blanditiis placeat sed aliquid eveniet, aperiam, nihil delectus unde inventore corrupti asperiores voluptatibus omnis modi dolore quibusdam eum harum saepe.
-</div>
-</div>
-</div>
+    <div class="" id="accordionExample">
+        <div class="card my-3">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                How do i make an appointment?
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                If you would like to make an appointent with any one of our practitioners, please contact our reception staff. Alternatively you can book an appointment online. Every effort will be made to accomodate your preffered time and choice of practitioner 
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                How do i get a copy of my record?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Is there a charge for extra copies?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How do i know the right practitioner?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+      </div>
 
 <form action="">
 <label for="enquiries"></label>
@@ -313,20 +324,22 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt exercitationem bl
 <div class="card h-100 border border-primary">
 <img src="./medilab_files/specialist1.jpg" class="card-img-top" alt="...">
 <div class="card-body">
-<h5 class="card-title">Dr. William Gerald</h5>
-<p class="card-text">Cardiotherapist.</p>
-<ul class="list-inline">
-<li class="list-inline-item">Mon - Thur</li>
-<li class="list-inline-item">08:00 - 20:00</li>
-</ul>
-<ul class="list-inline">
-<li class="list-inline-item">Friday</li>
-<li class="list-inline-item">08:00 - 20:00</li>
-</ul>
-<ul class="list-inline">
-<li class="list-inline-item">Saturday</li>
-<li class="list-inline-item">08:00 - 20:00</li>
-</ul>
+    <h5 class="card-title text-center my-3">Dr. William Gerald</h5>
+    <p class="card-text text-center">Cardiotherapist</p>
+    <table class="table table-borderless">
+        <tr class>
+            <td>Mon - Thur</td>
+            <td>08:00 - 20:00</td>
+        </tr>
+        <tr>
+          <td>Mon - Thur</td>
+          <td>08:00 - 20:00</td>
+        </tr>
+        <tr>
+          <td>Mon - Thur</td>
+          <td>08:00 - 20:00</td>
+        </tr>
+    </table>
 </div>
 </div>
 </div>
@@ -334,20 +347,22 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt exercitationem bl
 <div class="card h-100 border border-primary">
 <img src="./medilab_files/specialist2.png" class="card-img-top" alt="...">
 <div class="card-body">
-<h5 class="card-title">Dr Mike Peter</h5>
-<p class="card-text">Gynecologist</p>
-<ul class="list-inline">
-<li class="list-inline-item">Mon - Thur</li>
-<li class="list-inline-item">08:00 - 20:00</li>
-</ul>
-<ul class="list-inline">
-<li class="list-inline-item">Friday</li>
-<li class="list-inline-item">08:00 - 20:00</li>
-</ul>
-<ul class="list-inline">
-<li class="list-inline-item">Saturday</li>
-<li class="list-inline-item">08:00 - 20:00</li>
-</ul>
+    <h5 class="card-title text-center my-3">Dr. Mike Robert</h5>
+    <p class="card-text text-center">Gynecologist</p>
+    <table class="table table-borderless">
+      <tr class>
+          <td>Mon - Thur</td>
+          <td>08:00 - 20:00</td>
+      </tr>
+      <tr>
+        <td>Mon - Thur</td>
+        <td>08:00 - 20:00</td>
+      </tr>
+      <tr>
+        <td>Mon - Thur</td>
+        <td>08:00 - 20:00</td>
+      </tr>
+  </table>
 </div>
 </div>
 </div>
@@ -355,20 +370,22 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt exercitationem bl
 <div class="card h-100 border border-primary">
 <img src="./medilab_files/specialist3.jpg" class="card-img-top" alt="...">
 <div class="card-body">
-<h5 class="card-title">Dr. Doris Cedric</h5>
-<p class="card-text">Pschiatrist</p>
-<ul class="list-inline">
-<li class="list-inline-item text-left">Mon - Thur</li>
-<li class="list-inline-item">08:00 - 20:00</li>
-</ul>
-<ul class="list-inline">
-<li class="list-inline-item">Friday</li>
-<li class="list-inline-item">08:00 - 20:00</li>
-</ul>
-<ul class="list-inline">
-<li class="list-inline-item">Saturday</li>
-<li class="list-inline-item">08:00 - 20:00</li>
-</ul>
+    <h5 class="card-title text-center my-3">Dr. Peter Cedric</h5>
+    <p class="card-text text-center">Psychiatrist</p>
+    <table class="table table-borderless">
+      <tr class>
+          <td>Mon - Thur</td>
+          <td>08:00 - 20:00</td>
+      </tr>
+      <tr>
+        <td>Mon - Thur</td>
+        <td>08:00 - 20:00</td>
+      </tr>
+      <tr>
+        <td>Mon - Thur</td>
+        <td>08:00 - 20:00</td>
+      </tr>
+  </table>
 </div>
 </div>
 </div>
@@ -520,5 +537,6 @@ office conventional mode of application”
   </script>
 
 
-
+<!--Script file-->
+<script src="medilab_files/script.js"></script>
 </body></html>

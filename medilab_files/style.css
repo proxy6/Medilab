@@ -10,8 +10,13 @@ body{
 height: auto;
 font-family: 'Muli', sans-serif;
 font-style: normal;
-font-weight: normal;
+
+
 }
+h3, h4 h5 {
+    font-weight: 700;
+  }
+
 #header{
     background: rgb(230, 219, 219) url("head_img.jpg");
     background-size: cover;
@@ -24,6 +29,14 @@ font-weight: normal;
 #header #logo{
   color: #0052FF;
   font-weight: bolder;
+  font-size: 25px
+
+}
+nav #active{
+    color: #0052FF;;
+}
+#header #lab{
+    font-size: 25px;
 }
 .banner-content {
     display: flex;
@@ -61,6 +74,7 @@ nav.navbar-dark {
 /*main*/
 main{
 position: relative;
+
 }
 #main_sect_one p{
 font-size: 16px;
@@ -75,11 +89,74 @@ color: #0052FF;;
 }
 #main_sect_two h3{
 font-style: normal;
-font-size: 30px;
 line-height: 100%;
 color: #3A3A3A;
 }
 
+#main_sect_two p{
+    font-size: 20px;
+    line-height: 28px;
+    color: #5B5B5B;
+    justify-content: center;
+    }
+    
+
+   
+    #main_sect_two .col-sm-3:hover{
+        background-color: #0052FF;
+        
+    }
+    #main_sect_two .col-sm-3:hover .fig-two{
+        background-color: #0052FF;
+        color: #FFFFFF;
+    }
+    
+.services h3{
+    font-style: normal;
+    line-height: 100%;
+    color: #3A3A3A;
+  }
+  .services .card-title{
+    color: #0052FF;
+  }
+  .services .card-body{
+      font-weight: lighter;
+      font-family: 'Muli', sans-serif;
+      color: #5B5B5B;
+      line-height: 28px;
+  }
+  .services .card:hover{
+    color: rgb(251, 251, 251);
+    background-color: #0052FF; 
+  }
+  .services .card:hover li{
+    background: rgba(0, 0, 0, 0);
+  }
+  .services .card:hover h5{
+    color: rgb(251, 251, 251);
+  }
+  .services .card:hover .card-body{
+    color: rgb(251, 251, 251);
+  }
+
+  /*specialist*/
+  .specialists h5{
+    font-style: normal;
+    line-height: 100%;
+    color: #3A3A3A;
+  }
+  .specialists .card-title{
+    color: #3A3A3A;
+    font-weight: lighter;
+    font-family: 'Muli';
+  }
+  .specialists .card-text{
+    color: #0052FF;
+  }
+  .specialists .table{
+    color: #3A3A3A;
+   
+  }
 /* #main_sect_two .col-sm-3{
     background-color: #ffffff;
 } */
@@ -90,17 +167,13 @@ color: #3A3A3A;
    } */
 
 h3{
-font-weight: 600;
+font-weight: 500;
 font-size: 30px;
 line-height: 38px;
-color: #202020;
+color: #3A3A3A;
 }
-#main_sect_two p{
-font-size: 22px;
-line-height: 28px;
-color: #5B5B5B;
-justify-content: center;
-}
+
+
 .first_row{
 margin-top: 40px;
 margin-bottom: 40px;
@@ -109,15 +182,15 @@ margin-bottom: 40px;
 margin-top: 40px;
 margin-bottom: 40px;  
 }
-.services ul{
+/* .services ul{
 list-style: none;
-}
+} */
 .contact_text{
 margin-top: 60px;
 }
-.services ul li:before{
+/* .services ul li:before{
 content: '✓';
-}
+} */
 .row-fac {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
@@ -160,10 +233,12 @@ margin-bottom: 40px;
 .enquiry_section{
     background-color: #F9F9F9;
 }
-.faqHeader {
-font-size: 27px;
-margin: 20px;
+.enquiry_section .col-cover{
+    color: #3A3A3A;
+    font-weight: lighter;
+    font-size: 14px;
 }
+
 .card{
  border:1px solid #0052FF;
  font-weight: 900;
@@ -175,30 +250,7 @@ margin: 20px;
 text-decoration: none;
 }
 
-.panel-heading [data-toggle="collapse"]:after {
-font-family: 'Glyphicons Halflings';
-content: "e072"; /* "play" icon */
-float: right;
-color: #F58723;
-font-size: 18px;
-line-height: 22px;
-/* rotate "play" icon from > (right arrow) to down arrow */
--webkit-transform: rotate(-90deg);
--moz-transform: rotate(-90deg);
--ms-transform: rotate(-90deg);
--o-transform: rotate(-90deg);
-transform: rotate(-90deg);
-}
 
-.panel-heading [data-toggle="collapse"].collapsed:after {
-/* rotate "play" icon from > (right arrow) to ^ (up arrow) */
--webkit-transform: rotate(90deg);
--moz-transform: rotate(90deg);
--ms-transform: rotate(90deg);
--o-transform: rotate(90deg);
-transform: rotate(90deg);
-color: #454444;
-}
 
 /*all h5*/
 h5{
