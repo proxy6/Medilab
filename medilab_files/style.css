@@ -33,7 +33,11 @@ h3, h4 h5 {
 
 }
 nav #active{
-    color: #0052FF;;
+    color: #0052FF;
+    font-weight: 300;
+}
+#header .navbar {
+  padding: 15px 90px;
 }
 #header #lab{
     font-size: 25px;
@@ -47,9 +51,7 @@ nav #active{
     background: rgba(0, 0, 0, 0.3);
   }
 
-.department>.container>h1{
-    text-align: center;
-}
+
 /* Header */
 nav.navbar-dark {
     background-color: transparent;
@@ -310,8 +312,8 @@ font-family: 'Montserrat', sans-serif;
 }
 .foot_logo{
 font-weight: bold;
-font-size: 30px;
-line-height: 37px;
+font-size: 20px;
+line-height: 35px;
 }
 .copyright{
 font-size: 15px;
