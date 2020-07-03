@@ -28,14 +28,25 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
-
+  
+  <!--Add fixed nav on scroll-->
+  <script>
+ $(window).on('scroll', function() {
+      if($(window).scrollTop()){
+        $('nav').addClass('nav-sticky');
+      } else {
+        $('nav').removeClass('nav-sticky');
+      }
+    })
+  </script>
   
 
 </head>
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+
+  <!--Header and Nav Section-->
    
-  <section id="header" class="first-division aos-init aos-animate" data-aos="fade-down" data-aos-duration="1000">
-              
+  <section id="header">        
     <nav class="navbar navbar-expand-md fixed-top navbar-dark">
     <a class="navbar-brand" href="#"><span id="logo">Medic</span><span id="lab">lab</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +75,6 @@
         </ul>
       </div>
   </nav>
-
 
 <!--Content inside the header-->
 <div class="banner-content container-fluid">
@@ -117,55 +127,72 @@ medical care</p>
 </div>
 </section>
 
-<section id="main_sect_two" data-aos="zoom-in" data-aos-duration="2000" class="aos-init aos-animate mb-5 pb-3">
-<div class="container text-center">
-<h3 class="pt-5">Our Departments</h3>
-<p class="para_three pt-1">Lmedic medical care specialises in various services for the 
-convenience of the patients
-</p>
+<div class="department__bottom ptb" data-aos="zoom-in" data-aos-duration="2000" class="aos-init aos-animate">
+  <div class="plr container">
+    <div class="department__bottom-header text-center">
+      <h2 class="mb-3">Our Departments</h2>
+      <p class="mx-auto">
+        Lmedic medical care specialises in various services for the convenience of the patients
+      </p>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-12">
+        <div class="cards text-center" >
+          <div class="card border-0"  onmouseover = "setNewImage()" onmouseout = "setOldImage()" id="hovered-image">
+            <img class="card-img-top" src="./medilab_files/brain.png" alt="Brain">
+            <div class="card-body">
+              <h4 class="card-title">Psychiatry</h4>
+            </div>
+          </div>
+          <div class="card border-0"  onmouseover = "setNewImage1()" onmouseout = "setOldImage1()" id="hovered-image1">
+            <img class="card-img-top" src="./medilab_files/test_tube2.png" alt="Laboratory">
+            <div class="card-body">
+              <h4 class="card-title">Laboratory</h4>
+            </div>
+          </div>
+          <div class="card border-0" onmouseover = "setNewImage2()" onmouseout = "setOldImage2()" id="hovered-image2">
+            <img class="card-img-top" src="./medilab_files/tooth2.png" alt="Dentistry">
+            <div class="card-body">
+              <h4 class="card-title">Dentistry</h4>
+            </div>
+          </div>
+          <div class="card border-0" onmouseover = "setNewImage3()" onmouseout = "setOldImage3()" id="hovered-image3">
+            <img class="card-img-top" src="./medilab_files/heart_with_pulse2.png" alt="Cardiology">
+            <div class="card-body">
+              <h4 class="card-title">Cardiology</h4>
+            </div>
+          </div>
+          <div class="card border-0"  onmouseover = "setNewImage4()" onmouseout = "setOldImage4()" id="hovered-image4" >
+            <img class="card-img-top" src="./medilab_files/vagina2.png" alt="Gynacology">
+            <div class="card-body">
+              <h4 class="card-title">Gynacology</h4>
+            </div>
+          </div>
+          <div class="card border-0" onmouseover = "setNewImage5()" onmouseout = "setOldImage5()" id="hovered-image5">
+            <img class="card-img-top" src="./medilab_files/caduceus2.png" alt="Caduceus">
+            <div class="card-body">
+              <h4 class="card-title">Medicine</h4>
+            </div>
+          </div>
+          <div class="card border-0"  onmouseover = "setNewImage6()" onmouseout = "setOldImage6()" id="hovered-image6" >
+            <img class="card-img-top" src="./medilab_files/Car_Accident2.png" alt="Emergency">
+            <div class="card-body">
+              <h4 class="card-title">Emergency</h4>
+            </div>
+          </div>
+          <div class="card border-0" onmouseover = "setNewImage7()" onmouseout = "setOldImage7()" id="hovered-image7" >
+            <img class="card-img-top" src="./medilab_files/Child with Pacifier2.png" alt="Pediatric">
+            <div class="card-body">
+              <h4 class="card-title">Pediatrics</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="container text-center">
-<div class="row first_row justify-content-between px-1 py-4">
-<div class="col-sm-3" onmouseover = "setNewImage()" onmouseout = "setOldImage()" id="hovered-image" >
-<img  src="./medilab_files/brain.png" alt="" width="80px" height="80px"  >
 
-<h5 class="fig-two">Psychiatry</h5>
-</div>
-<div class="col-sm-3" onmouseover = "setNewImage1()" onmouseout = "setOldImage1()" id="hovered-image1">
-<img src="./medilab_files/test_tube2.png" alt="" width="80px" height="80px" >
-<h5 class="fig-two">Laboratory</h5>
-</div>
-<div class="col-sm-3" onmouseover = "setNewImage2()" onmouseout = "setOldImage2()" id="hovered-image2" >
-<img src="./medilab_files/tooth2.png" alt="" width="80px" height="80px" >
-<h5 class="fig-two">Dentistry</h5>
-</div>
-<div class="col-sm-3"onmouseover = "setNewImage3()" onmouseout = "setOldImage3()" id="hovered-image3" >
-<img src="./medilab_files/heart_with_pulse2.png" alt="" width="80px" height="80px" >
-<h5 class="fig-two">Cardiology</h5>
-</div>
-</div>
-<div class="row second_row mb-5">
-<div class="col-sm-3" onmouseover = "setNewImage4()" onmouseout = "setOldImage4()" id="hovered-image4" >
-<img src="./medilab_files/vagina2.png" alt="" width="80px" height="80px">
-<h5 class="fig-two">Gynecology</h5>
-</div>
-<div class="col-sm-3" onmouseover = "setNewImage5()" onmouseout = "setOldImage5()" id="hovered-image5" >
-<img src="./medilab_files/caduceus2.png" alt="" width="80px" height="80px" >
-<h5 class="fig-two">Medicine</h5>
-</div>
-<div class="col-sm-3" onmouseover = "setNewImage6()" onmouseout = "setOldImage6()" id="hovered-image6" >
-<img src="./medilab_files/Car_Accident2.png" alt="" width="80px" height="80px" >
-<h5 class="fig-two">Emergency</h5>
-</div>
-<div class="col-sm-3" onmouseover = "setNewImage7()" onmouseout = "setOldImage7()" id="hovered-image7" >
-<img src="./medilab_files/Child with Pacifier2.png" alt="" width="80px" height="80px" >
-<h5 class="fig-two">Pediatrics</h5>
-</div>
-</div>
-</div>
-</section>
-
-<section id="services" data-aos="zoom-in" data-aos-duration="2000" class="aos-init aos-animate">
+<section id="services" data-aos="zoom-in" data-aos-duration="2000" class="aos-init aos-animate pt-5">
 <div class="container">
 <h3 class="head_three text-center">Our Services</h3>
 <div class="row row-cols-1 row-cols-md-3 services">
@@ -225,14 +252,14 @@ convenience of the patients
 
 </section>
 
-<section class="enquiry_section aos-init aos-animate" data-aos="zoom-in" data-aos-duration="2000">
+<section class="enquiry_section aos-init aos-animate pt-4" data-aos="zoom-in" data-aos-duration="2000">
 <div class="container">
 <h3 class="faqHeader text-center">Frequently asked Questions</h3>
 <div class="" id="accordion">
 <div class="row-fac">
 <div class="col-cover">
 <div class="text-left">
-    <div class="" id="accordionExample">
+    <div class="" id="accordion">
         <div class="card my-3">
           <div class="card-header" id="headingOne">
             <h2 class="mb-0">
@@ -242,7 +269,7 @@ convenience of the patients
             </h2>
           </div>
       
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
                 If you would like to make an appointent with any one of our practitioners, please contact our reception staff. Alternatively you can book an appointment online. Every effort will be made to accomodate your preffered time and choice of practitioner 
             </div>
@@ -256,7 +283,7 @@ convenience of the patients
               </button>
             </h2>
           </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="card-body">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
             </div>
@@ -270,7 +297,7 @@ convenience of the patients
               </button>
             </h2>
           </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
             <div class="card-body">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
             </div>
@@ -294,7 +321,7 @@ convenience of the patients
 
 <form action="">
 <label for="enquiries"></label>
-<input type="button" value="Ask Questions" class="input_two">
+<input type="button" value="Ask Questions" class="input_two ">
 </form>
 </div>
 
@@ -439,13 +466,9 @@ office conventional mode of application”
 
 </div>
 
-<div class="map">
-<div class="col-lg-12">
-<div class="">
-<img src="./medilab_files/map_two.png" class="img-fluid" id="img-map" alt="map" height="608" width="1440">
-</div>
-</div>
-</div>
+<section class="map container-fluid pb-0">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.347223151489!2d-121.80445798520698!3d37.23946845054988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e2e2f769431fd%3A0xa9f4531fc4654b6e!2sHospital%20Pkwy%2C%20San%20Jose%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1593739226529!5m2!1sen!2sng" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</section>
 
 </main>
 <footer>

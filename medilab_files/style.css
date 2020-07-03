@@ -16,13 +16,20 @@ font-style: normal;
 h3, h4 h5 {
     font-weight: 700;
   }
-
+  .plr {
+    padding: 0px 40px;
+ }
+ 
+ .ptb {
+    padding-top: 50px;
+    padding-bottom: 50px;
+ }
 #header{
     background: rgb(230, 219, 219) url("head_img.jpg");
     background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
+  height: 700px;
   display: flex;
 
 }
@@ -338,6 +345,87 @@ grid-gap: 50px;
 width: 100%;
 }
 
+/*copy*/
+.department__bottom {
+  background: #f9f9f9;
+}
+.department__bottom-header h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #202020;
+}
+.department__bottom-header P {
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: #5b5b5b;
+  width: 600px;
+  line-height: 25px;
+ 
+}
+.department__bottom .row .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 200px));
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.department__bottom .row .card {
+  background-color: white;
+  box-shadow: 2px 4px 5px 0.1px #e9e7e7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  height: 160px;
+  padding: 20px 5px;
+  cursor: pointer;
+}
+.department__bottom .row .card:hover,
+.department__bottom .row .card:hover h4 {
+  background-color: #0052ff;
+  color: white;
+}
+.department__bottom .row .card-img-top {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+.department__bottom .row h4 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #0052ff;
+}
+.department__bottom .row h4:hover{
+  color: white;
+}
+@media screen and (max-width: 676px) {
+  .department__bottom .row .cards {
+     grid-template-columns: 1fr !important;
+  }
+  .department__bottom .row .cards .card {
+     width: 100%;
+  }
+
+  .department__bottom-header P {
+     width: 90%;
+     font-size: 1.3rem;
+  }
+  #header .navbar {
+    padding: 15px 30px;
+  }
+  .department__bottom .row .cards .card {
+    left: -15px;
+ }
+
+}
+  @media screen and (max-width: 650px) {
+    .department__bottom-header h2{
+       margin-top: -35px;
+       margin-top: -55px;
+    }
+ 
+  }
+
 @media only screen and (max-width:800px) {
 .third-wrapper {
 display: grid;
@@ -380,8 +468,11 @@ text-align: center
 .head_test{
 text-align: center;
 letter-spacing: 0.08em;
-margin-bottom: 70px;
+margin-bottom: 30px;
 color: #FFFFFF;
+}
+.test_second_img{
+  padding-bottom: 10px;
 }
 .ellipse{
 width: 101.17px;
@@ -405,4 +496,14 @@ color: #ffffff;
 color: #0052FF;
 font-weight: 900;
 z-index: 1;
+}
+
+/*map*/
+
+.map {
+   height: 500px;
+}
+.map iframe {
+   width: 100%;
+   height: 100%;
 }
